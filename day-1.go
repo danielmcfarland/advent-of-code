@@ -15,24 +15,24 @@ func main() {
 
 	fmt.Println("Advent of Code - Part 1\n")
 
-	sampleResult := solvePuzzle("day-1/sample-1.txt")
+	sampleResult := solveDayOnePuzzle("day-1/sample-1.txt")
 	fmt.Printf("Sample Total is %v\n", sampleResult)
 
-	puzzleResult := solvePuzzle("day-1/puzzle.txt")
+	puzzleResult := solveDayOnePuzzle("day-1/puzzle.txt")
 	fmt.Printf("Puzzle Total is %v\n", puzzleResult)
 
 	fmt.Println()
 
 	fmt.Println("Advent of Code - Part 2\n")
 
-	sampleAdvancedResult := solveAdvancedPuzzle("day-1/sample-2.txt")
+	sampleAdvancedResult := solveDayOneAdvancedPuzzle("day-1/sample-2.txt")
 	fmt.Printf("Advanced Sample Total is %v\n", sampleAdvancedResult)
 
-	puzzleAdvancedResult := solveAdvancedPuzzle("day-1/puzzle.txt")
+	puzzleAdvancedResult := solveDayOneAdvancedPuzzle("day-1/puzzle.txt")
 	fmt.Printf("Advanced Puzzle Total is %v\n", puzzleAdvancedResult)
 }
 
-func solvePuzzle(filename string) int64 {
+func solveDayOnePuzzle(filename string) int64 {
 	file, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)
@@ -55,7 +55,7 @@ func solvePuzzle(filename string) int64 {
 	return total
 }
 
-func solveAdvancedPuzzle(filename string) int64 {
+func solveDayOneAdvancedPuzzle(filename string) int64 {
 	file, err := os.Open(filename)
 	if err != nil {
 		log.Fatal(err)
